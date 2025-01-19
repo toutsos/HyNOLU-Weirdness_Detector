@@ -1,0 +1,63 @@
+---- VALID SENTENCES ----
+The dog chased the ball.
+She read the book.
+He painted the wall.
+The teacher explained the lesson.
+The cat scratched the sofa.
+The baby held the toy.
+She washed the dishes.
+He bought a car.
+The chef cooked a meal.
+The farmer planted seeds.
+The student solved the problem.
+She played the piano.
+He fixed the bicycle.
+The bird built a nest.
+The boy found a coin.
+She arranged the flowers.
+He repaired the clock.
+The artist sketched a portrait.
+The dog fetched a stick.
+She sang a song.
+He cleaned the room.
+The student took notes.
+She poured coffee.
+The baker made bread.
+The actor memorized lines.
+He sculpted a statue.
+She brushed her hair.
+The cook chopped onions.
+The player kicked the ball.
+The child hugged the teddy bear.
+
+---- INVALID SENTENCES ----
+He runs the sun.
+She reads the table.
+They painted the happiness.
+The cat chased the clouds.
+He cooked the music.
+She plays the window.
+The dog caught the idea.
+They wrote the car.
+He jumps the mountain.
+She danced the sandwich.
+The bird sings the chair.
+He solved the pencil.
+She fixed the laughter.
+The farmer harvested the sky.
+He drives the feelings.
+She flew the homework.
+They baked the tree.
+The child hugged the clock.
+He learned the soup.
+She cleans the thought.
+The chef grilled the smile.
+He washed the dream.
+She drew the ocean.
+The dog fetched the idea.
+He pushed the song.
+She painted the rain.
+They kicked the friendship.
+He carried the love.
+She caught the light.
+The artist sculpted the thought.

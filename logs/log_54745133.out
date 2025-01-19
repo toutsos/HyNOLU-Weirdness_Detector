@@ -1,0 +1,183 @@
+Sentence: The dog chased the ball.
+Result: Valid
+
+Sentence: She read the book.
+Result: Valid
+
+Sentence: He painted the wall.
+Result: Valid
+
+Sentence: The teacher explained the lesson.
+Result: Valid
+
+Sentence: The cat scratched the sofa.
+Result: Valid
+
+Sentence: The baby held the toy.
+Result: Valid
+
+Sentence: She washed the dishes.
+Result: Valid
+
+Sentence: He bought a car.
+Result: Valid
+
+Sentence: The chef cooked a meal.
+Result: Valid
+
+Sentence: The farmer planted seeds.
+Result: Valid
+
+Sentence: The student solved the problem.
+Result: Valid
+
+Sentence: She played the piano.
+Result: Valid
+
+Sentence: He fixed the bicycle.
+Result: Valid
+
+Sentence: The bird built a nest.
+Result: Valid
+
+Sentence: The boy found a coin.
+Result: Valid
+
+Sentence: She arranged the flowers.
+Result: Valid
+
+Sentence: He repaired the clock.
+Result: Valid
+
+Sentence: The artist sketched a portrait.
+Result: Valid
+
+Sentence: The dog fetched a stick.
+Result: Valid
+
+Sentence: She sang a song.
+Result: Valid
+
+Sentence: He cleaned the room.
+Result: Valid
+
+Sentence: The student took notes.
+Result: Valid
+
+Sentence: She poured coffee.
+Result: Valid
+
+Sentence: The baker made bread.
+Result: Valid
+
+Sentence: The actor memorized lines.
+Result: Valid
+
+Sentence: He sculpted a statue.
+Result: Valid
+
+Sentence: She brushed her hair.
+Result: Valid
+
+Sentence: The cook chopped onions.
+Result: Valid
+
+Sentence: The player kicked the ball.
+Result: Valid
+
+Sentence: The child hugged the teddy bear.
+Result: Valid
+
+Sentence: He runs the sun.
+Result: Invalid
+
+Sentence: She reads the table.
+Result: Invalid
+
+Sentence: They painted the happiness.
+Result: Invalid
+
+Sentence: The cat chased the clouds.
+Result: Invalid
+
+Sentence: He cooked the music.
+Result: Invalid
+
+Sentence: She plays the window.
+Result: Invalid
+
+Sentence: The dog caught the idea.
+Result: Invalid
+
+Sentence: They wrote the car.
+Result: Invalid
+
+Sentence: He jumps the mountain.
+Result: Invalid
+
+Sentence: She danced the sandwich.
+Result: Invalid
+
+Sentence: The bird sings the chair.
+Result: Invalid
+
+Sentence: He solved the pencil.
+Result: Invalid
+
+Sentence: She fixed the laughter.
+Result: Invalid
+
+Sentence: The farmer harvested the sky.
+Result: Invalid
+
+Sentence: He drives the feelings.
+Result: Invalid
+
+Sentence: She flew the homework.
+Result: Invalid
+
+Sentence: They baked the tree.
+Result: Invalid
+
+Sentence: The child hugged the clock.
+Result: Invalid
+
+Sentence: He learned the soup.
+Result: Invalid
+
+Sentence: She cleans the thought.
+Result: Invalid
+
+Sentence: The chef grilled the smile.
+Result: Invalid
+
+Sentence: He washed the dream.
+Result: Invalid
+
+Sentence: She drew the ocean.
+Result: Invalid
+
+Sentence: The dog fetched the idea.
+Result: Invalid
+
+Sentence: He pushed the song.
+Result: Invalid
+
+Sentence: She painted the rain.
+Result: Invalid
+
+Sentence: They kicked the friendship.
+Result: Invalid
+
+Sentence: He carried the love.
+Result: Invalid
+
+Sentence: She caught the light.
+Result: Invalid
+
+Sentence: The artist sculpted the thought.
+Result: Invalid
+
+Valid sentences: 30
+Invalid sentences: 30
+Processing completed in 3.37 seconds.
