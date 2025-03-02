@@ -21,49 +21,49 @@ def evaluate_sentence(sentence):
     time.sleep(0.1)
 
     #  Formulate the prompt (SCTRICT PROMPT) ~4-5% Sentences classified as Valid
-    # prompt = f"""
-    #   Evaluate the following sentence for coherence and plausibility:
+    prompt = f"""
+      Evaluate the following sentence for coherence and plausibility:
 
-    #   Sentence: '{sentence}'
+      Sentence: '{sentence}'
 
-    #   Classify the sentence as 'Valid' if it makes sense, can logically appear in a book or newspaper, and is applicable to everyday tasks. Focus primarily on whether the object can logically be used with the given verb in a typical everyday situation without overcomplicating the analysis.
+      Classify the sentence as 'Valid' if it makes sense, can logically appear in a book or newspaper, and is applicable to everyday tasks. Focus primarily on whether the object can logically be used with the given verb in a typical everyday situation without overcomplicating the analysis.
 
-    #   Classify the sentence as 'Invalid' if it is illogical, self-contradictory, or impossible within commonly understood contexts.
+      Classify the sentence as 'Invalid' if it is illogical, self-contradictory, or impossible within commonly understood contexts.
 
-    #   Return just one word 'Valid' or 'Invalid' with a brief explanation about your decision!
-    # """
+      Return just one word 'Valid' or 'Invalid' with a brief explanation about your decision!
+    """
 
     # Relaxed Prompt
-    prompt = f"""
+    # prompt = f"""
 
-        Classify a sentence as Invalid only if it describes a scenario that is completely beyond any conceivable reality, even under the most imaginative or hypothetical conditions. This includes cases where:
+    #     Classify a sentence as Invalid only if it describes a scenario that is completely beyond any conceivable reality, even under the most imaginative or hypothetical conditions. This includes cases where:
 
-        The action described is fundamentally impossible under any realistic or fictional context.
-        The sentence contains elements that contradict basic universal concepts (e.g., logical impossibilities, contradictions with common human experience).
-        In all other cases, classify the sentence as Valid, allowing for unusual, rare, or imaginative scenarios that could happen under specific or extraordinary circumstances. If a human can conceive of the event happening in some form—no matter how unlikely—it should be considered valid.
+    #     The action described is fundamentally impossible under any realistic or fictional context.
+    #     The sentence contains elements that contradict basic universal concepts (e.g., logical impossibilities, contradictions with common human experience).
+    #     In all other cases, classify the sentence as Valid, allowing for unusual, rare, or imaginative scenarios that could happen under specific or extraordinary circumstances. If a human can conceive of the event happening in some form—no matter how unlikely—it should be considered valid.
 
-        Examples:
+    #     Examples:
 
-        The monk borrowed a lion from Cheyenne. → Valid, since borrowing exotic animals, though rare, is possible.
+    #     The monk borrowed a lion from Cheyenne. → Valid, since borrowing exotic animals, though rare, is possible.
 
-        Victoria was cleaning a locomotive. → Valid, since this is a common, realistic task.
+    #     Victoria was cleaning a locomotive. → Valid, since this is a common, realistic task.
 
-        Duncan doesn't say that "The anthropologist won't be smoking a motion picture." → Valid, because people can express anything, even nonsense.
+    #     Duncan doesn't say that "The anthropologist won't be smoking a motion picture." → Valid, because people can express anything, even nonsense.
 
-        Constance will be dreaming of a paper. → Valid, since dreams can contain anything imaginable.
+    #     Constance will be dreaming of a paper. → Valid, since dreams can contain anything imaginable.
 
-        Gary farms a human corpse. → Valid, since farming techniques could be metaphorically or ethically debated but not physically impossible.
+    #     Gary farms a human corpse. → Valid, since farming techniques could be metaphorically or ethically debated but not physically impossible.
 
-        The refugee will suffer a vehicle brake. → Valid, as metaphorical interpretations could apply in an abstract sense.
+    #     The refugee will suffer a vehicle brake. → Valid, as metaphorical interpretations could apply in an abstract sense.
 
-        The mountain danced with joy. → Invalid, as inanimate objects do not possess emotions or mobility in any conceivable context.
+    #     The mountain danced with joy. → Invalid, as inanimate objects do not possess emotions or mobility in any conceivable context.
 
-        Time traveled back into itself to rewrite history. → Invalid, as it contradicts fundamental concepts of causality.
+    #     Time traveled back into itself to rewrite history. → Invalid, as it contradicts fundamental concepts of causality.
 
-        Return just one word 'Valid' or 'Invalid' nothing else!
+    #     Return just one word 'Valid' or 'Invalid' nothing else!
 
-        Sentence: '{sentence}'
-    """
+    #     Sentence: '{sentence}'
+    # """
 
     # Send the request to Ollama
     response = requests.post(
@@ -118,14 +118,16 @@ def process_sentences(sentences):
 
 start_time = time.time()
 
+# file_path = "/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/data/1000_input_suf.txt"  # Replace with your actual file path
+# file_output = "/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/data/1000_input_suf_results.txt"
 # file_path = "/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/data/100000_suf_sentences.txt"
 # file_output = "/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/data/100000_suf_sentences_res.txt"
 file_path = "/data/fsg/.sumonlp/sentence_generation/LibraryOfOldSentences/processed/2025-02-22/out-eng-shuf-500k.txt"
-file_output = "/data/fsg/.sumonlp/sentence_generation/LibraryOfOldSentences/processed/2025-02-22/detector/out-eng-shuf-relaxed-500k.txt"
+file_output = "/data/fsg/.sumonlp/sentence_generation/LibraryOfOldSentences/processed/2025-02-22/detector/out-eng-shuf-stricted-500k.txt"
 
 print("-"*50)
 print(f"Weirdness Detector Started")
-print(f"Relaxed Model")
+print(f"Stricted Model")
 print("-"*50)
 
 # Read sentences from file
@@ -137,8 +139,8 @@ valid_sentences, invalid_sentences = process_sentences(sentences_to_test)
 
 # Save results to file
 with open(file_output, "w") as f:
-    f.write(f"Valid sentences: {len(valid_sentences)} \n")
-    f.write(f"Invalid sentences: {len(invalid_sentences)} \n\n")
+    f.write(f"Valid sentences: {len(valid_sentences)}\n")
+    f.write(f"Invalid sentences: {len(invalid_sentences)}\n\n")
     f.write("---- VALID SENTENCES ----\n")
     f.writelines([f"{sentence}\n" for sentence in valid_sentences])
     f.write("\n---- INVALID SENTENCES ----\n")

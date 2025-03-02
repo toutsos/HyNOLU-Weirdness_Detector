@@ -3,7 +3,7 @@
 #SBATCH --output=/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/logs/log_%j.out  # Output log file
 #SBATCH --error=/home/angelos.toutsios.gr/data/Thesis_dev/weirdness_detector/logs/log_%j.err   # Error log file
 #SBATCH -N 1
-#SBATCH --mem=120G
+#SBATCH --mem=60G
 #SBATCH --cpus-per-task=64
 #SBATCH --time=80:00:00              # Time limit (hh:mm:ss)
 #SBATCH --partition=beards            # Specify the partition
